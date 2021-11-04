@@ -8,24 +8,6 @@
     <title>LoginForm</title>
     <link rel="stylesheet" href="style.css">
 
-    <script type="module">
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
-        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
-        
-        const firebaseConfig = {
-          apiKey: "AIzaSyCvBPbuBFUD_bMyZc1gzhPqyanSCRan-Mk",
-          authDomain: "loginform-13280.firebaseapp.com",
-          projectId: "loginform-13280",
-          storageBucket: "loginform-13280.appspot.com",
-          messagingSenderId: "985087853849",
-          appId: "1:985087853849:web:f6d70df0592e22e89c7188",
-          measurementId: "G-XVDX1CRD8Y"
-        };
-      
-        const app = initializeApp(firebaseConfig);
-        const analytics = getAnalytics(app);
-      </script>
-    
 
 </head>
 
@@ -33,16 +15,40 @@
     <div class="login-form">
         <h1>Welcome to the Login Form</h1>
 
-        
-            <input type="email" name="email" placeholder="E-Mail" id="email" required>
-            <input type="password" name="password" placeholder="Passowrd" id="passowrd" required>
-            <button type="submit" onclick=login()>Submit</button>
-        
+
+        <input type="email" name="email" placeholder="E-Mail" id="email" required>
+        <input type="password" name="password" placeholder="Passowrd" id="passowrd" required>
+        <button type="submit" onclick=login()>Submit</button>
+
     </div>
 
-    <div class="login-form">
+    <div class="welcome-form">
         <h1>Welcome Home Baby</h1>
+        <button onclick= logout()>Logout</button>
     </div>
+
+
+    
+
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-firestore-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.2.0/firebase-auth-compat.js"></script>
+<script>
+
+    const firebaseConfig = {
+                apiKey: "AIzaSyAL1V7HfOkFrySkjSCj9_eEyC32MsSRcec",
+                authDomain: "loginform-72011.firebaseapp.com",
+                projectId: "loginform-72011",
+                storageBucket: "loginform-72011.appspot.com",
+                messagingSenderId: "972383604616",
+                appId: "1:972383604616:web:f7a822c524168c5489743d"
+            };
+   const firebaseApp = firebase.initializeApp(firebaseConfig);
+   const db = firebaseApp.firestore();
+   const auth = firebaseApp.auth();
+
+</script>
+
 
     <script src="main.js"></script>
 </body>
