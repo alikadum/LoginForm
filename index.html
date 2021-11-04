@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LoginForm</title>
+    <link rel="stylesheet" href="style.css">
+
+    <script type="module">
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-app.js";
+        import { getAnalytics } from "https://www.gstatic.com/firebasejs/9.2.0/firebase-analytics.js";
+        
+        const firebaseConfig = {
+          apiKey: "AIzaSyCvBPbuBFUD_bMyZc1gzhPqyanSCRan-Mk",
+          authDomain: "loginform-13280.firebaseapp.com",
+          projectId: "loginform-13280",
+          storageBucket: "loginform-13280.appspot.com",
+          messagingSenderId: "985087853849",
+          appId: "1:985087853849:web:f6d70df0592e22e89c7188",
+          measurementId: "G-XVDX1CRD8Y"
+        };
+      
+        const app = initializeApp(firebaseConfig);
+        const analytics = getAnalytics(app);
+      </script>
+    
+
+</head>
+
+<body>
+    <div class="login-form">
+        <h1>Welcome to the Login Form</h1>
+
+        
+            <input type="email" name="email" placeholder="E-Mail" id="email" required>
+            <input type="password" name="password" placeholder="Passowrd" id="passowrd" required>
+            <button type="submit" onclick=login()>Submit</button>
+        
+    </div>
+
+    <div class="login-form">
+        <h1>Welcome Home Baby</h1>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+
+</html>
